@@ -1,0 +1,16 @@
+{
+  "require": {
+    "silex/silex": "^2",
+    "twig/twig": "^2",
+    "vlucas/phpdotenv": "^2",
+    "roave/security-advisories": "dev-master",
+    "symfony/twig-bridge": "^3.2",
+    "league/csv": "^8"
+  },
+  "autoload": {
+    "psr-4": {
+      "Strayobject\\Cravc\\": "src/Strayobject/CsvRowAverageValueCalc",
+      "Strayobject\\App\\": "src/Strayobject/App"
+    }
+  }
+}
