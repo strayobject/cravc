@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+    web:
+        build:
+            context: .
+            dockerfile: opt/nginx/Dockerfile
+        ports:
+            - 9085:80
+        depends_on:
+            - php-fpm
+            - app
+        volumes_from:
+            - app
+
+    php-fpm:
+        build:
+            context: .
+            dockerfile: opt/php71/Dockerfile
+        working_dir: /var/www
+        depends_on:
+            - app
+        volumes_from:
+          - app
+        environment:
+          - DOCKER_DEV=1
+          - HOST_ADDRESS=${HOST_ADDRESS}
+
+    app:
+        image: busybox
+        stdin_open: true
+        volumes:
+            - .:/var/www
