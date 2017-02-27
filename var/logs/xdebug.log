@@ -1,0 +1,6 @@
+Log opened at 2017-02-27 00:00:37
+I: Connecting to configured address/port: 192.168.77.4:9001.
+W: Creating socket for '192.168.77.4:9001', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2017-02-27 00:00:37
+
