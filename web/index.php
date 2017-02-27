@@ -112,7 +112,7 @@ $app
         $uploader->upload($file, $app['config']['location.filename.original']);
 
         $data = $app['provider.calculated_data']->getData();
-        $written = $app['writer.csv_data']->writeData($data);
+        $app['writer.csv_data']->writeData($data);
 
         return $app->redirect('/latest-calc-file');
     })

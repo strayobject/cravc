@@ -5,6 +5,10 @@ namespace Strayobject\Cravc\Calculator;
 
 class AverageCalculator
 {
+    /**
+     * @param array $values
+     * @return float|int
+     */
     public function getAverage(array $values)
     {
         $count = count($values);
